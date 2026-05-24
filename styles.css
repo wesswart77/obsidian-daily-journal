@@ -1,0 +1,273 @@
+/* Daily Journal Plugin Styles */
+
+.daily-journal-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+.daily-journal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.daily-journal-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dj-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.dj-btn:hover {
+  background: var(--interactive-accent-hover);
+}
+
+.dj-btn.secondary {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+}
+
+.dj-btn.secondary:hover {
+  background: var(--background-modifier-hover);
+}
+
+/* Week overview section */
+.dj-section {
+  margin-bottom: 16px;
+}
+
+.dj-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Week entries */
+.dj-week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.dj-day-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 2px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  cursor: pointer;
+  transition: background 0.1s;
+  min-height: 52px;
+  font-size: 10px;
+}
+
+.dj-day-cell:hover {
+  background: var(--background-modifier-hover);
+}
+
+.dj-day-cell.today {
+  border-color: var(--interactive-accent);
+  background: var(--background-primary-alt);
+}
+
+.dj-day-cell.has-entry {
+  background: var(--background-primary-alt);
+}
+
+.dj-day-cell.no-entry {
+  opacity: 0.5;
+}
+
+.dj-day-label {
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.dj-day-mood {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.dj-day-habits {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+/* Streak display */
+.dj-streak-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  margin-bottom: 12px;
+}
+
+.dj-streak-fire {
+  font-size: 20px;
+}
+
+.dj-streak-count {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-accent);
+}
+
+.dj-streak-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Mood selector */
+.dj-mood-row {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.dj-mood-btn {
+  font-size: 22px;
+  padding: 4px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.15s;
+  line-height: 1;
+}
+
+.dj-mood-btn:hover {
+  background: var(--background-modifier-hover);
+  border-color: var(--background-modifier-border);
+}
+
+.dj-mood-btn.selected {
+  border-color: var(--interactive-accent);
+  background: var(--background-primary-alt);
+}
+
+/* Habit checkboxes */
+.dj-habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dj-habit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.dj-habit-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.dj-habit-item label {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Reflection prompts */
+.dj-prompt-box {
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--background-secondary);
+  border-left: 3px solid var(--interactive-accent);
+  font-size: 12px;
+  color: var(--text-normal);
+  font-style: italic;
+  margin: 4px 0 8px;
+}
+
+/* Entry list */
+.dj-entry-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.dj-entry-item:hover {
+  background: var(--background-modifier-hover);
+}
+
+.dj-entry-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.dj-entry-mood-display {
+  font-size: 16px;
+}
+
+.dj-habit-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.dj-habit-progress {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--background-modifier-border);
+  overflow: hidden;
+}
+
+.dj-habit-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--interactive-accent);
+  transition: width 0.3s;
+}
+
+/* Modal */
+.dj-modal-section {
+  margin-bottom: 16px;
+}
+
+.dj-modal-section h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

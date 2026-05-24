@@ -1,0 +1,10 @@
+{
+  "id": "daily-journal-plus",
+  "name": "Daily Journal",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "A daily journaling system with mood tracking, habit logging, streak counters, and reflection prompts.",
+  "author": "Daily Journal",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
